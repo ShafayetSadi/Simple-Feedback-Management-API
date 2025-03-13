@@ -1,0 +1,103 @@
+###
+POST http://localhost:8000/api/register/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "test",
+  "email": "test@gmail.com",
+  "password": "password",
+  "role": "user"
+}
+
+###
+POST http://localhost:8000/api/register/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "sadi",
+  "email": "sadi@gmail.com",
+  "password": "12sadi09",
+  "role": "admin"
+}
+
+###
+POST http://localhost:8000/api/login/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "test",
+  "password": "password"
+}
+
+###
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "test",
+  "password": "password"
+}
+
+###
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "sadi",
+  "password": "12sadi09"
+}
+
+
+###
+POST http://localhost:8000/api/token/refresh/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0Mjc0NjY0NCwiaWF0IjoxNzQxODgyNjQ0LCJqdGkiOiJlMWM2OTgxMWU4YzU0NzM1YjJjZmM5YWY0MzU0ZGJiMCIsInVzZXJfaWQiOjd9.f0QuMzL9suvVy1M_dmqOQAbUqxabXePojzSU6EnSJiw"
+}
+
+###
+POST http://localhost:8000/api/feedback/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Enable two-factor authentication",
+  "description": "Adding 2FA would improve security for user accounts.",
+  "category": "feature request",
+  "status": "pending"
+}
+
+###
+POST http://localhost:8000/api/feedback/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxODgzODQzLCJpYXQiOjE3NDE4ODI2NDQsImp0aSI6ImQ1MGRlMDFjYTU2MzQ5ODQ4Njc3Mzk0ZDBlYjk2MzZhIiwidXNlcl9pZCI6N30.cAo-V2kU40kIer-vtUbDA-_mytPxnBfLMS0WeXzZEmQ
+Content-Type: application/json
+
+{
+  "title": "Add a dark mode option",
+  "description": "Adding a dark mode option would be helpful for users who use the app at night.",
+  "category": "feature_request",
+  "status": "pending"
+}
+
+###
+GET http://localhost:8000/api/feedback/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxODg5NjI0LCJpYXQiOjE3NDE4ODM2MjQsImp0aSI6IjU3ODM4ZjQ4ZmNjZTQ0ZjQ5NmU3ODY5ZWUyM2ExNzgwIiwidXNlcl9pZCI6OH0.4FSi32lCgmI238O1JbZG9GKUqUPW-YKb7uCMhvTGMj8
+
+###
+GET http://localhost:8000/api/feedback/13/ HTTP/1.1
+
+###
+PUT http://localhost:8000/api/feedback/13/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxODkxNDUzLCJpYXQiOjE3NDE4ODU0NTMsImp0aSI6IjFlN2I2NjgwYzFlNzRiMDlhYTNiZDFiZjI1NDkzMGYzIiwidXNlcl9pZCI6N30.7wAkQqqhwq0MC3HS3hTclTCIkCJ21Jo2LfcQ0AIQtMM
+
+{
+  "title": "How you doing",
+  "description": "How do you do",
+  "category": "bug_report",
+  "status": "resolved"
+}
+
+###
+DELETE http://localhost:8000/api/feedback/7/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxODkxNDUzLCJpYXQiOjE3NDE4ODU0NTMsImp0aSI6IjFlN2I2NjgwYzFlNzRiMDlhYTNiZDFiZjI1NDkzMGYzIiwidXNlcl9pZCI6N30.7wAkQqqhwq0MC3HS3hTclTCIkCJ21Jo2LfcQ0AIQtMM
