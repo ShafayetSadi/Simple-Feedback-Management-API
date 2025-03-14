@@ -14,3 +14,12 @@ dependencies = [
 dev = [
     "ruff>=0.9.10",
 ]
+
+[tool.ruff]
+exclude = ["migrations", "populate_feedback.py"]
+line-length = 119
+
+[tool.ruff.lint]
+extend-select = ["E501", "N", "R", "I"]
+exclude = ["migrations", "populate_feedback.py"]
+
