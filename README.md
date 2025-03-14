@@ -25,7 +25,6 @@ A **Django REST API** for managing user feedback with authentication, CRUD opera
 Ensure you have the following installed:
 
 - **Python 3.12+**
-- **Django**
 - **uv**
 - **PostgreSQL or SQLite (Default)**
 
