@@ -82,10 +82,11 @@ Access the API at `http://127.0.0.1:8000/api/`
 
 ### Authentication
 
-| Method | Endpoint       | Description             |
-|--------|----------------|-------------------------|
-| POST   | /api/register/ | Register a new user     |
-| POST   | /api/login/    | Login and get JWT token | 
+| Method | Endpoint           | Description             |
+|--------|--------------------|-------------------------|
+| POST   | /api/register/     | Register a new user     |
+| POST   | /api/login/        | Login and get JWT token | 
+| POST   | /api/token/refresh | Refresh JWT token       |
 
 ### Feedback Management
 
@@ -114,7 +115,9 @@ curl -X POST http://127.0.0.1:8000/api/login/ \
      -H "Content-Type: application/json" \
      -d '{"username": "johndoe", "password": "securepassword"}'
 ```
+
 Response:
+
 ```json
 {
   "access": "your_jwt_access_token",
@@ -168,6 +171,7 @@ uv run python manage.py test
 ## 🤝 Contribution Guidelines
 
 Contributions are welcome! Please follow these steps:
+
 1. Fork the repository
 2. Create a new branch (`git checkout -b feat/some-feature`)
 3. Make your changes
@@ -178,5 +182,6 @@ Contributions are welcome! Please follow these steps:
 ---
 
 ## 📝 License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
